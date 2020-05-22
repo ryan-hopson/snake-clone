@@ -61,9 +61,9 @@ class SnakeSegment:
 
     def draw(self, window, gradient):
         rect = pygame.Rect(self.x * CELL_SIZE, self.y * CELL_SIZE, CELL_SIZE, CELL_SIZE)
-        red = int(5 + 25 * gradient)
-        green = int(50 + 205 * gradient)
-        blue = int(10 + 50 * gradient)
+        red = int(5 + 25 * (1 - gradient))
+        green = int(50 + 205 * (1 - gradient))
+        blue = int(10 + 50 * (1 - gradient))
         pygame.draw.rect(window, (red, green, blue), rect)
         pygame.draw.rect(window, (255,255,255), rect, 1)
 
@@ -137,16 +137,16 @@ class Snake:
 # ~         GRID FORMAT          ~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~        +-----------+         ~
-# ~        | X X X X X |         ~
-# ~        | X X X H X |         ~
-# ~        | X T X B X |         ~
-# ~        | X B B B X |         ~
+# ~        | X A X X X |         ~
+# ~        | X X X S X |         ~
+# ~        | X S X S X |         ~
+# ~        | X S S S X |         ~
 # ~        | X X X X X |         ~
 # ~        +-----------+         ~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~            Key               ~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ~ H - Head, B - Body, T - Tail ~
+# ~ S - Snake Segment, A - Apple ~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 class Game:
