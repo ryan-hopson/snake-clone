@@ -1,6 +1,5 @@
 # A Snake Clone
-A simple snake clone using pygame (v2.0.0.dev6). It was made with Python (v3.7.7).
-\nTo run the program:
+A simple snake clone using pygame (v2.0.0.dev6). It was made with Python (v3.7.7).  To run the program:
 ```console
 foo@bar:~$ python3 Snake.py
 ```
